@@ -155,7 +155,15 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="py-12 px-6 bg-white text-black text-center border-t-2 border-black">
-        <p className="text-lg font-light">
+        <div className="text-sm font-light text-gray-700 space-y-1 mb-4">
+          <p className="font-normal">chemical codes d.o.o.</p>
+          <p>VAT ID: HR61857067281 | MBS: 081447959</p>
+          <p>Zagrebačkog odreda 17a</p>
+          <p>HR-10361 Sesvetski Kraljevec</p>
+          <p>Temeljni kapital, €2.654</p>
+        </div>
+
+        <p className="text-sm font-light text-gray-700">
           © {new Date().getFullYear()} Chemical Codes. All rights reserved.
         </p>
       </footer>
