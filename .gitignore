@@ -6,6 +6,8 @@
 # testing
 /coverage
 
+.next
+
 # misc
 .DS_Store
 *.pem
