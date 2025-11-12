@@ -44,32 +44,6 @@ After building, you can preview the production build locally:
 npm run start
 ```
 
-## Project Structure
-
-```
-cc-web/
-├── app/
-│   ├── globals.css      # Global styles
-│   ├── layout.tsx       # Root layout
-│   └── page.tsx         # Homepage
-├── public/
-│   ├── cc_2_black.svg   # Logo (black)
-│   └── cc_2_white.svg   # Logo (white)
-├── next.config.js       # Next.js configuration
-├── tailwind.config.ts   # Tailwind CSS configuration
-└── package.json
-```
-
-## Deployment
-
-The `out` directory contains the static files that can be deployed to any static hosting service:
-
-- Netlify
-- Vercel
-- GitHub Pages
-- AWS S3
-- Any web server
-
 Simply upload the contents of the `out` directory to your hosting provider.
 
 ## Customization
