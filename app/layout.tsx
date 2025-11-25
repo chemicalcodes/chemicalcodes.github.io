@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Chemical Codes - Chemometrics & Machine Learning",
+  title: "chemical codes - Chemometrics & Machine Learning",
   description: "Specializing in learning from chemical data through advanced chemometrics, machine learning, and research.",
 };
 

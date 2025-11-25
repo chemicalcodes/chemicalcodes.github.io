@@ -11,7 +11,7 @@ export default function LecturersPage() {
              <span className="bg-black text-white text-xs font-bold px-2 py-1 uppercase tracking-wide">Program Leader</span>
           </div>
           <h3 className="text-2xl font-bold mb-2">doc. dr. sc. Mario Lovrić</h3>
-          <p className="text-gray-600 mb-4 font-medium">Chemical Codes d.o.o. / PTF Osijek</p>
+          <p className="text-gray-600 mb-4 font-medium">chemical codes d.o.o. / PTF Osijek</p>
           <div className="space-y-2 text-sm text-gray-700">
             <p><strong>Email:</strong> mario@chemical.codes</p>
             <p><strong>Web:</strong> www.chemical.codes</p>
