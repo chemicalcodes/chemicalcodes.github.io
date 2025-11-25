@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link"; // <--- Added import
 
 export default function Home() {
   return (
@@ -35,6 +36,18 @@ export default function Home() {
               Get in Touch
             </a>
           </div>
+
+          {/* --- NEW ADDITION FOR LIFELONG LEARNING --- */}
+          <div className="mt-16">
+            <Link 
+              href="/lifelong" 
+              className="inline-block border-b-2 border-gray-300 text-gray-500 hover:text-black hover:border-black transition-colors text-lg font-medium pb-1"
+            >
+              Interested in our Education Program? <span className="text-black font-bold">View "AI in Biosciences" Course →</span>
+            </Link>
+          </div>
+          {/* ------------------------------------------ */}
+
         </div>
       </section>
 
