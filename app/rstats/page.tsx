@@ -137,12 +137,12 @@ export default function RStatsPage() {
             <p className="text-sm text-gray-500 mb-8">VAT included. Group discounts available.</p>
             
             <a 
-              href="mailto:mario@chemical.codes"
+              href="mailto:info@chemical.codes"
               className="w-full block bg-black text-white text-xl font-bold py-4 hover:bg-gray-800 transition-colors"
             >
               Register via Email
             </a>
-            <p className="mt-4 text-gray-600 font-medium">mario@chemical.codes</p>
+            <p className="mt-4 text-gray-600 font-medium">info@chemical.codes</p>
           </div>
 
         </div>

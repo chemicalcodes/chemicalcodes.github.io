@@ -55,7 +55,7 @@ export default function LifelongLayout({ children }: { children: React.ReactNode
       {/* FOOTER */}
       <footer className="bg-gray-50 border-t border-gray-200 py-12 text-center">
         <div className="max-w-7xl mx-auto px-6">
-          <h4 className="font-bold text-lg mb-2">Organized by PTF Osijek & Chemical Codes</h4>
+          <h4 className="font-bold text-lg mb-2">Organized by PTF Osijek & chemical codes d.o.o.</h4>
           <p className="text-xs text-gray-400">
              © {new Date().getFullYear()} Chemical Codes. All rights reserved.
           </p>
