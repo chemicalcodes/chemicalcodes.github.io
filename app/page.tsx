@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link"; 
 
 export default function Home() {
   return (
@@ -18,7 +19,7 @@ export default function Home() {
           </div>
 
           <p className="text-2xl md:text-3xl lg:text-4xl text-black mb-24 max-w-5xl mx-auto font-light leading-relaxed">
-            Unlocking insights from chemical data through advanced chemometrics and machine learning
+            Unlocking insights from chemical and biological data through bioinformatics and machine learning
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -35,6 +36,41 @@ export default function Home() {
               Get in Touch
             </a>
           </div>
+
+          {/* --- NEW EDUCATION LINKS SECTION --- */}
+          <div className="mt-24 border-t border-gray-100 pt-12">
+            <p className="text-sm font-bold uppercase tracking-widest text-gray-400 mb-8">
+              Education & Workshops
+            </p>
+            
+            <div className="flex flex-col md:flex-row gap-12 justify-center items-center">
+              {/* Link 1: Lifelong Learning */}
+              <Link 
+                href="/lifelong" 
+                className="group flex flex-col items-center gap-2 text-center"
+              >
+                <span className="text-xl font-bold text-black border-b-2 border-transparent group-hover:border-black transition-all">
+                  AI in Biosciences
+                </span>
+                <span className="text-sm text-gray-500">Lifelong Learning Program</span>
+              </Link>
+
+              <span className="hidden md:block text-gray-200 text-4xl font-light">|</span>
+
+              {/* Link 2: R-Stats */}
+              <Link 
+                href="/rstats" 
+                className="group flex flex-col items-center gap-2 text-center"
+              >
+                <span className="text-xl font-bold text-black border-b-2 border-transparent group-hover:border-black transition-all">
+                  Biostatistics in R
+                </span>
+                <span className="text-sm text-gray-500">Oct 2025 Workshop</span>
+              </Link>
+            </div>
+          </div>
+          {/* ----------------------------------- */}
+
         </div>
       </section>
 
@@ -60,9 +96,9 @@ export default function Home() {
                   <line x1="15" y1="12" x2="17.5" y2="12" />
                 </svg>
               </div>
-              <h3 className="text-3xl font-bold mb-6 text-black">Chemometrics</h3>
+              <h3 className="text-3xl font-bold mb-6 text-black">Bioinformatics</h3>
               <p className="text-black text-lg leading-relaxed font-light">
-                Advanced statistical methods for extracting meaningful information from complex chemical datasets and analytical measurements.
+                Advanced statistical methods for extracting meaningful information from complex bio/chemical datasets and analytical measurements.
               </p>
             </div>
 
@@ -115,16 +151,14 @@ export default function Home() {
           </div>
 
           <h2 className="text-5xl md:text-7xl font-black mb-12 tracking-tight leading-tight">
-            Decoding Chemical Data
+            Decoding bio/chemical data
           </h2>
 
           <p className="text-2xl md:text-3xl mb-10 font-light leading-relaxed">
-            At Chemical Codes, we specialize in learning from chemical data by combining advanced chemometrics, machine learning, and innovative research approaches.
+            At  chemical codes, we specialize in learning from chemical and biological data by combining bioinformatics, chemometrics, machine learning, and innovative research approaches.
           </p>
 
-          <p className="text-xl md:text-2xl font-light leading-relaxed text-gray-700">
-            Our expertise bridges chemistry and data science, enabling researchers and organizations to extract valuable insights from complex chemical datasets and drive scientific discovery forward.
-          </p>
+      
         </div>
       </section>
 
@@ -164,7 +198,7 @@ export default function Home() {
         </div>
 
         <p className="text-sm font-light text-gray-700">
-          © {new Date().getFullYear()} Chemical Codes. All rights reserved.
+          © {new Date().getFullYear()} chemical codes d.o.o. All rights reserved.
         </p>
       </footer>
     </main>
