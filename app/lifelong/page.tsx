@@ -48,7 +48,10 @@ export default function LifelongHome() {
             </li>
           </ul>
           <div className="mt-8">
-            <a href="mailto:info@chemical.codes" className="block w-full text-center bg-black text-white py-3 font-bold hover:bg-gray-800 transition-colors">
+            <a
+              href={`mailto:info@chemical.codes?subject=${encodeURIComponent("Application – AI in Biosciences (2026)")}&body=${encodeURIComponent("Name: \nEmail: \nPhone: \nInstitution/Company: \nRole/Title: \nDegree: \nHow did you hear about us: ")}`}
+              className="block w-full text-center bg-black text-white py-3 font-bold hover:bg-gray-800 transition-colors"
+            >
               Apply Now
             </a>
           </div>
