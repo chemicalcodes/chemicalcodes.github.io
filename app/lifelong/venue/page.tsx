@@ -17,8 +17,17 @@ export default function VenuePage() {
         <strong>Important Note:</strong> The specific classrooms/labs for the practical exercises will be arranged by agreement with the participants prior to the start of the course.
       </div>
       
-      <div className="mt-12 h-64 bg-gray-100 flex items-center justify-center text-gray-400 rounded-lg border-2 border-dashed border-gray-300">
-        Google Maps Embed Placeholder (Franje Kuhača 18)
+      <div className="mt-12 rounded-lg overflow-hidden border border-gray-200">
+        <iframe
+          src="https://maps.google.com/maps?q=Franje+Kuha%C4%8Da+18,+31000+Osijek,+Croatia&output=embed"
+          width="100%"
+          height="400"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="Faculty of Food Technology Osijek"
+        />
       </div>
     </div>
   );
