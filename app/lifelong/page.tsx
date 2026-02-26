@@ -5,7 +5,7 @@ export default function LifelongHome() {
     <div className="animate-in fade-in duration-500">
       <div className="mb-16 border-l-4 border-black pl-6">
         <h1 className="text-4xl md:text-5xl font-black mb-4 tracking-tight text-black">
-          Application of AI in Biosciences
+          AI in Life Sciences with Python
         </h1>
         <p className="text-xl text-gray-600 font-light max-w-3xl">
           A specialized lifelong learning program designed to train participants in Python programming, 

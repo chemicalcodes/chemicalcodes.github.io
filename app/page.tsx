@@ -10,7 +10,7 @@ export default function Home() {
           <div className="mb-24 flex justify-center">
             <Image
               src="/cc_2_black.svg"
-              alt="Chemical Codes Logo"
+              alt="chemical codes Logo"
               width={1200}
               height={600}
               priority
@@ -50,7 +50,7 @@ export default function Home() {
                 className="group flex flex-col items-center gap-2 text-center"
               >
                 <span className="text-xl font-bold text-black border-b-2 border-transparent group-hover:border-black transition-all">
-                  AI in Biosciences
+                  AI in Life Sciences with Python
                 </span>
                 <span className="text-sm text-gray-500">Lifelong Learning Program</span>
               </Link>
