@@ -1,166 +1,171 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function RStatsPage() {
   return (
-    <main className="min-h-screen bg-white text-gray-900 font-sans selection:bg-black selection:text-white">
-      
-      {/* NAVIGATION (Simple Back Button) */}
-      <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 py-4 px-6 z-50 flex justify-between items-center">
-        <Link href="/" className="font-bold text-xl tracking-tight text-black hover:opacity-70 transition-opacity">
-          chemical codes
+    <main className="min-h-[100dvh] bg-stone-50 text-zinc-900 selection:bg-emerald-600 selection:text-white">
+
+      {/* NAVIGATION */}
+      <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-40 glass rounded-full px-6 py-3 flex items-center gap-6">
+        <Link href="/" className="flex items-center gap-2 hover:opacity-70 transition-opacity duration-300">
+          <Image src="/cc_2_black.svg" alt="Chemical Codes" width={100} height={32} className="h-4 w-auto" />
         </Link>
-        <Link href="/" className="text-sm font-semibold border border-black px-4 py-2 hover:bg-black hover:text-white transition-all">
-          ← Back to Home
+        <div className="w-px h-4 bg-zinc-300/60" />
+        <Link href="/" className="text-xs font-medium text-zinc-500 hover:text-zinc-900 transition-colors duration-300 tracking-wide uppercase flex items-center gap-1.5">
+          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+          </svg>
+          Home
         </Link>
       </nav>
 
       {/* HERO SECTION */}
-      <section className="pt-32 pb-20 px-6 max-w-5xl mx-auto">
-        <div className="border-l-8 border-black pl-8 mb-12">
-          <span className="text-sm font-bold tracking-widest uppercase text-gray-500 mb-2 block">
-            Workshop / Radionica
-          </span>
-          <h1 className="text-6xl md:text-8xl font-black text-black mb-6 tracking-tighter leading-none">
-            Biostatistics <br /> in R
-          </h1>
-          <p className="text-2xl md:text-3xl font-light text-gray-600 max-w-2xl">
-            October 23 – 29, 2025 <br />
-            <span className="font-semibold text-black">BIOCentre & Online</span>
-          </p>
-        </div>
+      <section className="pt-36 pb-24 px-6 md:px-16 lg:px-24 max-w-[1400px] mx-auto relative">
+        {/* Background orb */}
+        <div className="absolute top-20 right-0 w-[400px] h-[400px] bg-emerald-100/30 rounded-full blur-[120px] pointer-events-none" />
 
-        {/* TARGET AUDIENCE */}
-        <div className="bg-gray-50 p-8 md:p-12 border-l-4 border-gray-300">
-          <h3 className="text-xl font-bold mb-4">Is this for you?</h3>
-          <p className="text-lg text-gray-700 leading-relaxed">
-            Do you research chemical and biological phenomena and need to analyze your data? 
-            Are you interested in bioinformatics, machine learning, and data science? 
-            <strong>This workshop is designed exactly for you.</strong>
-          </p>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start relative">
+          <div className="lg:col-span-7">
+            <span className="inline-block px-3 py-1 bg-emerald-50 text-emerald-700 text-[11px] font-semibold uppercase tracking-wider rounded-full mb-6">
+              Workshop / Radionica
+            </span>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold text-zinc-900 mb-10 tracking-tighter leading-[0.95]">
+              Biostatistics <br /> in R
+            </h1>
+            <p className="text-xl md:text-2xl font-light text-zinc-500 max-w-[36ch] leading-relaxed">
+              October 23 &ndash; 29, 2025 <br />
+              <span className="font-semibold text-zinc-900">BIOCentre & Online</span>
+            </p>
+          </div>
+
+          {/* TARGET AUDIENCE */}
+          <div className="lg:col-span-5 surface rounded-2xl p-8 md:p-10 lg:mt-16">
+            <h3 className="text-sm font-semibold uppercase tracking-[0.15em] text-zinc-400 mb-5">Is this for you?</h3>
+            <p className="text-zinc-600 leading-relaxed font-light">
+              Do you research chemical and biological phenomena and need to analyze your data?
+              Are you interested in bioinformatics, machine learning, and data science?
+              <strong className="text-zinc-900 font-medium"> This workshop is designed exactly for you.</strong>
+            </p>
+          </div>
         </div>
       </section>
 
       {/* SCHEDULE SECTION */}
-      <section className="py-20 px-6 bg-black text-white">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black mb-16 tracking-tight">Schedule</h2>
+      <section className="py-28 px-6 md:px-16 lg:px-24 bg-zinc-950 text-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-emerald-900/20 rounded-full blur-[150px] pointer-events-none" />
 
-          <div className="grid md:grid-cols-2 gap-12">
-            
+        <div className="max-w-[1400px] mx-auto relative">
+          <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-emerald-500 mb-5 block">
+            Timetable
+          </span>
+          <h2 className="text-4xl md:text-6xl font-extrabold mb-20 tracking-tighter leading-none">Schedule</h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+
             {/* Online Block */}
-            <div className="space-y-8">
-              <div className="border-t border-gray-700 pt-6">
-                <span className="text-sm font-bold text-gray-400 uppercase tracking-wider">Online (MS Teams)</span>
-                <div className="flex justify-between items-baseline mt-2 mb-2">
-                  <h3 className="text-2xl font-bold">Oct 23</h3>
-                  <span className="text-lg font-mono text-gray-300">13:00 - 16:00</span>
+            <div className="space-y-10">
+              {[
+                { day: "Oct 23", time: "13:00 - 16:00", topic: "Basics of Biostatistics" },
+                { day: "Oct 24", time: "13:00 - 16:00", topic: "Basics of Biostatistics" },
+              ].map((session) => (
+                <div key={session.day} className="group border-t border-zinc-800/60 pt-8 hover:border-zinc-700 transition-colors duration-500">
+                  <span className="text-[11px] font-semibold text-zinc-600 uppercase tracking-[0.15em]">Online (MS Teams)</span>
+                  <div className="flex justify-between items-baseline mt-3 mb-2">
+                    <h3 className="text-2xl font-bold tracking-tight">{session.day}</h3>
+                    <span className="text-base font-mono text-zinc-500">{session.time}</span>
+                  </div>
+                  <p className="text-zinc-400 font-light">{session.topic}</p>
                 </div>
-                <p className="text-gray-300">Basics of Biostatistics</p>
-              </div>
-
-              <div className="border-t border-gray-700 pt-6">
-                <span className="text-sm font-bold text-gray-400 uppercase tracking-wider">Online (MS Teams)</span>
-                <div className="flex justify-between items-baseline mt-2 mb-2">
-                  <h3 className="text-2xl font-bold">Oct 24</h3>
-                  <span className="text-lg font-mono text-gray-300">13:00 - 16:00</span>
-                </div>
-                <p className="text-gray-300">Basics of Biostatistics</p>
-              </div>
+              ))}
             </div>
 
             {/* On-Site Block */}
-            <div className="space-y-8">
-              <div className="bg-white/10 p-6 border-l-4 border-white">
-                <span className="text-sm font-bold text-white uppercase tracking-wider bg-black px-2 py-1">On-Site / Kampus</span>
-                <div className="flex justify-between items-baseline mt-4 mb-2">
-                  <h3 className="text-2xl font-bold">Oct 27</h3>
-                  <span className="text-lg font-mono text-gray-300">09:00 - 15:00</span>
+            <div className="space-y-6">
+              {[
+                { day: "Oct 27", time: "09:00 - 15:00", topics: ["Tool Installation", "Intro to R Programming", "Numerical Operations in R"] },
+                { day: "Oct 28", time: "09:00 - 15:00", topics: ["Data Loading", "Data Exploration", "Data Visualization"] },
+                { day: "Oct 29", time: "09:00 - 15:00", topics: ["Statistical Tests", "Classification Models", "Regression Models"] },
+              ].map((session) => (
+                <div key={session.day} className="group bg-white/[0.03] border border-zinc-800/50 rounded-2xl p-7 hover:border-zinc-700 hover:bg-white/[0.05] transition-all duration-500">
+                  <span className="inline-block px-3 py-1 bg-emerald-600/20 text-emerald-400 text-[11px] font-semibold uppercase tracking-wider rounded-full mb-4">
+                    On-Site / Kampus
+                  </span>
+                  <div className="flex justify-between items-baseline mb-4">
+                    <h3 className="text-2xl font-bold tracking-tight">{session.day}</h3>
+                    <span className="text-base font-mono text-zinc-500">{session.time}</span>
+                  </div>
+                  <ul className="text-zinc-400 space-y-2 font-light">
+                    {session.topics.map((topic) => (
+                      <li key={topic} className="flex items-start gap-3">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0" />
+                        <span>{topic}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <ul className="text-gray-300 list-disc list-inside space-y-1">
-                  <li>Tool Installation</li>
-                  <li>Intro to R Programming</li>
-                  <li>Numerical Operations in R</li>
-                </ul>
-              </div>
-
-              <div className="bg-white/10 p-6 border-l-4 border-white">
-                <span className="text-sm font-bold text-white uppercase tracking-wider bg-black px-2 py-1">On-Site / Kampus</span>
-                <div className="flex justify-between items-baseline mt-4 mb-2">
-                  <h3 className="text-2xl font-bold">Oct 28</h3>
-                  <span className="text-lg font-mono text-gray-300">09:00 - 15:00</span>
-                </div>
-                <ul className="text-gray-300 list-disc list-inside space-y-1">
-                  <li>Data Loading</li>
-                  <li>Data Exploration</li>
-                  <li>Data Visualization</li>
-                </ul>
-              </div>
-
-              <div className="bg-white/10 p-6 border-l-4 border-white">
-                <span className="text-sm font-bold text-white uppercase tracking-wider bg-black px-2 py-1">On-Site / Kampus</span>
-                <div className="flex justify-between items-baseline mt-4 mb-2">
-                  <h3 className="text-2xl font-bold">Oct 29</h3>
-                  <span className="text-lg font-mono text-gray-300">09:00 - 15:00</span>
-                </div>
-                <ul className="text-gray-300 list-disc list-inside space-y-1">
-                  <li>Statistical Tests</li>
-                  <li>Classification Models</li>
-                  <li>Regression Models</li>
-                </ul>
-              </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
       {/* DETAILS GRID */}
-      <section className="py-20 px-6 max-w-5xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-12">
-          
+      <section className="py-28 px-6 md:px-16 lg:px-24 max-w-[1400px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+
           {/* Lecturers */}
           <div>
-            <h2 className="text-3xl font-black mb-8">Lecturers</h2>
-            <ul className="space-y-4 text-lg">
-              <li className="font-bold border-b border-gray-200 pb-2">doc. dr. sc. Mario Lovrić</li>
-              <li className="font-bold border-b border-gray-200 pb-2">izv. prof. Mislav Stjepan Žebec</li>
-              <li className="font-bold border-b border-gray-200 pb-2">dr. sc. Iva Šunić</li>
-              <li className="font-bold border-b border-gray-200 pb-2">dr. sc. Sandra Vitko</li>
-              <li className="font-bold border-b border-gray-200 pb-2">mag. Lucia Pole</li>
+            <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-zinc-400 mb-5 block">
+              Team
+            </span>
+            <h2 className="text-3xl font-extrabold mb-10 tracking-tighter">Lecturers</h2>
+            <ul className="space-y-0">
+              {[
+                "doc. dr. sc. Mario Lovri\u0107",
+                "izv. prof. Mislav Stjepan \u017debec",
+                "dr. sc. Iva \u0160uni\u0107",
+                "dr. sc. Sandra Vitko",
+                "mag. Lucia Pole",
+              ].map((name) => (
+                <li key={name} className="group font-medium border-b border-zinc-100 py-5 text-zinc-900 hover:pl-3 transition-all duration-300 flex items-center gap-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex-shrink-0" />
+                  {name}
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Registration Box */}
-          <div className="bg-gray-50 border-2 border-black p-8 text-center flex flex-col justify-center">
-            <h3 className="text-xl font-bold mb-2 uppercase tracking-wide">Registration Fee</h3>
-            <div className="text-6xl font-black mb-2">€290</div>
-            <p className="text-sm text-gray-500 mb-8">VAT included. Group discounts available.</p>
-            
-            <a 
+          <div className="surface rounded-2xl p-10 md:p-12 flex flex-col justify-center">
+            <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-zinc-400 mb-3 block">Registration Fee</span>
+            <div className="text-6xl font-extrabold tracking-tighter mb-2">&euro;290</div>
+            <p className="text-sm text-zinc-400 mb-12 font-light">VAT included. Group discounts available.</p>
+
+            <a
               href="mailto:info@chemical.codes"
-              className="w-full block bg-black text-white text-xl font-bold py-4 hover:bg-gray-800 transition-colors"
+              className="w-full block bg-zinc-900 text-white text-center text-sm font-medium tracking-wide py-4 rounded-full hover:bg-emerald-700 transition-all duration-500 active:scale-[0.97]"
             >
               Register via Email
             </a>
-            <p className="mt-4 text-gray-600 font-medium">info@chemical.codes</p>
+            <p className="mt-4 text-zinc-400 font-light text-sm text-center">info@chemical.codes</p>
           </div>
-
         </div>
-        
+
         {/* Location Info */}
-        <div className="mt-16 text-center border-t border-gray-200 pt-12">
-          <h4 className="text-sm font-bold uppercase tracking-widest text-gray-500 mb-4">Location</h4>
-          <p className="text-2xl font-bold">BIOCentar</p>
-          <p className="text-xl text-gray-600">Borongajska 83H, Zagreb</p>
-          <p className="text-gray-500 mt-2">& Online via MS Teams</p>
+        <div className="mt-24 text-center border-t border-zinc-200 pt-16">
+          <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-zinc-400 mb-4 block">Location</span>
+          <p className="text-3xl font-bold tracking-tight">BIOCentar</p>
+          <p className="text-lg text-zinc-500 font-light mt-1">Borongajska 83H, Zagreb</p>
+          <p className="text-zinc-400 mt-2 text-sm font-light">& Online via MS Teams</p>
         </div>
       </section>
 
       {/* FOOTER */}
-      <footer className="py-12 bg-white text-center border-t border-gray-100">
-        <p className="text-gray-500 text-sm">Organized by <strong>chemical codes d.o.o.</strong></p>
+      <footer className="py-12 border-t border-zinc-200/60 bg-stone-50 text-center">
+        <p className="text-zinc-400 text-sm font-light">Organized by <strong className="text-zinc-600 font-medium">chemical codes d.o.o.</strong></p>
       </footer>
-      
+
     </main>
   );
 }

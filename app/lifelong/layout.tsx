@@ -2,62 +2,64 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 export default function LifelongLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
 
-  const getTabClass = (path: string) => {
-    const isActive = pathname === path;
-    return isActive
-      ? "text-sm font-bold text-black border-b-2 border-black pb-1"
-      : "text-sm font-semibold text-gray-600 hover:text-black transition-colors";
-  };
+  const tabs = [
+    { href: "/lifelong", label: "Overview" },
+    { href: "/lifelong/program", label: "Program" },
+    { href: "/lifelong/lecturers", label: "Lecturers" },
+    { href: "/lifelong/venue", label: "Venue" },
+  ];
 
   return (
-    <div className="min-h-screen bg-white text-gray-900 font-sans">
-      
-      {/* HEADER */}
-      <header className="sticky top-0 bg-white/95 backdrop-blur-sm z-50 border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center">
-          
-          {/* Logo Area */}
-          <div className="mb-4 md:mb-0">
-            <Link href="/" className="text-xl font-bold tracking-tight text-black">
-              chemical codes <span className="font-light text-gray-500">| Education</span>
-            </Link>
-          </div>
+    <div className="min-h-[100dvh] bg-stone-50 text-zinc-900">
 
-          {/* Navigation Tabs */}
-          <nav className="flex items-center gap-8">
-            <Link href="/lifelong" className={getTabClass("/lifelong")}>
-              Home
-            </Link>
-            <Link href="/lifelong/program" className={getTabClass("/lifelong/program")}>
-              Program
-            </Link>
-            <Link href="/lifelong/lecturers" className={getTabClass("/lifelong/lecturers")}>
-              Lecturers
-            </Link>
-            <Link href="/lifelong/venue" className={getTabClass("/lifelong/venue")}>
-              Venue
-            </Link>
+      {/* HEADER */}
+      <header className="sticky top-0 z-40 glass">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-16 lg:px-24 py-4 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
+
+          <Link href="/" className="flex items-center gap-3 hover:opacity-70 transition-opacity duration-300">
+            <Image src="/cc_2_black.svg" alt="Chemical Codes" width={100} height={32} className="h-5 w-auto" />
+            <span className="w-px h-4 bg-zinc-300" />
+            <span className="text-sm font-medium text-zinc-400">Education</span>
+          </Link>
+
+          <nav className="flex items-center gap-1 bg-zinc-100/80 rounded-full p-1">
+            {tabs.map((tab) => {
+              const isActive = pathname === tab.href;
+              return (
+                <Link
+                  key={tab.href}
+                  href={tab.href}
+                  className={`text-xs font-medium px-5 py-2 rounded-full transition-all duration-300 ${
+                    isActive
+                      ? "bg-zinc-900 text-white shadow-sm"
+                      : "text-zinc-500 hover:text-zinc-900"
+                  }`}
+                >
+                  {tab.label}
+                </Link>
+              );
+            })}
           </nav>
         </div>
       </header>
 
       {/* PAGE CONTENT */}
-      {/* Aligned with main page (max-w-7xl) */}
-      <main className="max-w-7xl mx-auto px-6 py-16">
+      <main className="max-w-[1400px] mx-auto px-6 md:px-16 lg:px-24 py-20">
         {children}
       </main>
 
       {/* FOOTER */}
-      <footer className="bg-gray-50 border-t border-gray-200 py-12 text-center">
-        <div className="max-w-7xl mx-auto px-6">
-          <h4 className="font-bold text-lg mb-2">Organized by PTF Osijek & chemical codes d.o.o.</h4>
-          <p className="text-xs text-gray-400">
-             © {new Date().getFullYear()} Chemical Codes. All rights reserved.
+      <footer className="border-t border-zinc-200/60 py-12 bg-stone-50">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-16 lg:px-24 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-sm text-zinc-500 font-light">Organized by <strong className="font-medium text-zinc-700">PTF Osijek</strong> & <strong className="font-medium text-zinc-700">chemical codes d.o.o.</strong></p>
+          <p className="text-xs text-zinc-400">
+             &copy; {new Date().getFullYear()} Chemical Codes
           </p>
         </div>
       </footer>
