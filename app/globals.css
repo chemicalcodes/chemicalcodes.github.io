@@ -92,6 +92,15 @@ body {
     0 4px 24px -4px rgba(0, 0, 0, 0.08);
 }
 
+/* Hide scrollbar but keep scrolling */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 /* Accent underline */
 .accent-line {
   position: relative;

@@ -28,14 +28,14 @@ export default function LifelongLayout({ children }: { children: React.ReactNode
             <span className="text-sm font-medium text-zinc-400">Education</span>
           </Link>
 
-          <nav className="flex items-center gap-1 bg-zinc-100/80 rounded-full p-1">
+          <nav className="flex items-center gap-1 bg-zinc-100/80 rounded-full p-1 overflow-x-auto no-scrollbar">
             {tabs.map((tab) => {
               const isActive = pathname === tab.href;
               return (
                 <Link
                   key={tab.href}
                   href={tab.href}
-                  className={`text-xs font-medium px-5 py-2 rounded-full transition-all duration-300 ${
+                  className={`text-xs font-medium px-4 sm:px-5 py-2 rounded-full transition-all duration-300 whitespace-nowrap ${
                     isActive
                       ? "bg-zinc-900 text-white shadow-sm"
                       : "text-zinc-500 hover:text-zinc-900"
