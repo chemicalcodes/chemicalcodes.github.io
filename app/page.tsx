@@ -38,13 +38,15 @@ export default function Home() {
       <main className="min-h-[100dvh] bg-stone-50">
       {/* Floating Navigation */}
       <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-40 glass rounded-full px-5 sm:px-8 py-3 flex items-center gap-4 sm:gap-8 animate-fade-in">
-        <Image
-          src="/cc_2_black.svg"
-          alt="Chemical Codes"
-          width={120}
-          height={40}
-          className="h-5 w-auto opacity-80"
-        />
+        <a href="/">
+          <Image
+            src="/cc_2_black.svg"
+            alt="Chemical Codes"
+            width={120}
+            height={40}
+            className="h-5 w-auto opacity-80 hover:opacity-100 transition-opacity duration-300"
+          />
+        </a>
         <div className="hidden sm:block w-px h-5 bg-zinc-300/60" />
         <a href="#expertise" className="hidden sm:block text-xs font-medium text-zinc-500 hover:text-zinc-900 transition-colors duration-300 tracking-wide uppercase">
           Expertise
