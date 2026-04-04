@@ -37,28 +37,24 @@ export default function Home() {
       />
       <main className="min-h-[100dvh] bg-stone-50">
       {/* Floating Navigation */}
-      <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-40 glass rounded-full px-5 sm:px-8 py-3 flex items-center gap-4 sm:gap-8 animate-fade-in">
+      <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-40 glass rounded-full px-4 sm:px-8 py-3 flex items-center gap-3 sm:gap-8 animate-fade-in">
         <a href="/">
           <Image
             src="/cc_2_black.svg"
             alt="Chemical Codes"
             width={120}
             height={40}
-            className="h-5 w-auto opacity-80 hover:opacity-100 transition-opacity duration-300"
+            className="h-4 sm:h-5 w-auto opacity-80 hover:opacity-100 transition-opacity duration-300"
           />
         </a>
-        <div className="hidden sm:block w-px h-5 bg-zinc-300/60" />
-        <a href="#expertise" className="hidden sm:block text-xs font-medium text-zinc-500 hover:text-zinc-900 transition-colors duration-300 tracking-wide uppercase">
+        <div className="w-px h-4 sm:h-5 bg-zinc-300/60" />
+        <a href="#expertise" className="text-[10px] sm:text-xs font-medium text-zinc-500 hover:text-zinc-900 transition-colors duration-300 tracking-wide uppercase">
           Expertise
         </a>
-        <a href="#about" className="hidden sm:block text-xs font-medium text-zinc-500 hover:text-zinc-900 transition-colors duration-300 tracking-wide uppercase">
+        <a href="#about" className="text-[10px] sm:text-xs font-medium text-zinc-500 hover:text-zinc-900 transition-colors duration-300 tracking-wide uppercase">
           About
         </a>
-        <a href="#contact" className="hidden sm:block text-xs font-medium text-zinc-500 hover:text-zinc-900 transition-colors duration-300 tracking-wide uppercase">
-          Contact
-        </a>
-        {/* Mobile: single contact link */}
-        <a href="#contact" className="sm:hidden text-xs font-medium text-zinc-500 hover:text-zinc-900 transition-colors duration-300 tracking-wide uppercase">
+        <a href="#contact" className="text-[10px] sm:text-xs font-medium text-zinc-500 hover:text-zinc-900 transition-colors duration-300 tracking-wide uppercase">
           Contact
         </a>
       </nav>
