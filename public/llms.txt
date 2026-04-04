@@ -1,0 +1,35 @@
+# Chemical Codes
+
+> Specializing in learning from chemical and biological data through advanced bioinformatics, chemometrics, machine learning, and research.
+
+Chemical Codes (chemical codes d.o.o.) is a company based in Croatia that transforms complex biological and chemical datasets into actionable knowledge using bioinformatics, chemometrics, and machine learning.
+
+## Core Expertise
+
+- **Bioinformatics**: Advanced statistical methods for extracting meaningful information from complex bio/chemical datasets and analytical measurements.
+- **Machine Learning**: State-of-the-art machine learning algorithms tailored for chemical data analysis, predictive modeling, and pattern recognition.
+- **Research**: Cutting-edge research in data-driven chemistry, developing innovative approaches to understanding and predicting chemical behavior.
+
+## Programs
+
+### AI in Biosciences — Lifelong Learning Program
+A specialized program designed to train participants in Python programming, task automation, and the application of deep learning algorithms for biomedical data processing and analysis. Participants learn Python, NumPy, pandas, and PyTorch to create scripts for data processing and apply deep learning to chemical and biological problems.
+
+- Program details: https://www.chemical.codes/lifelong
+- Curriculum: https://www.chemical.codes/lifelong/program
+- Lecturers: https://www.chemical.codes/lifelong/lecturers
+- Venue: https://www.chemical.codes/lifelong/venue
+
+### Biostatistics in R — Workshop
+Hands-on workshop covering statistical analysis and data visualization in R for bioscience professionals.
+
+- Workshop details: https://www.chemical.codes/rstats
+
+## Company Information
+
+- **Company**: chemical codes d.o.o.
+- **Website**: https://www.chemical.codes
+- **Email**: info@chemical.codes
+- **VAT ID**: HR61857067281
+- **MBS**: 081447959
+- **Address**: Zagrebačkog odreda 17a, HR-10361 Sesvetski Kraljevec, Croatia

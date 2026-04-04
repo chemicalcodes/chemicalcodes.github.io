@@ -2,8 +2,40 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "chemical codes d.o.o.",
+    url: "https://www.chemical.codes",
+    logo: "https://www.chemical.codes/icon-512.png",
+    email: "info@chemical.codes",
+    description:
+      "Specializing in transforming complex biological and chemical datasets into actionable knowledge through bioinformatics, chemometrics, and machine learning.",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Zagrebačkog odreda 17a",
+      addressLocality: "Sesvetski Kraljevec",
+      postalCode: "HR-10361",
+      addressCountry: "HR",
+    },
+    vatID: "HR61857067281",
+    knowsAbout: [
+      "Chemometrics",
+      "Machine Learning",
+      "Bioinformatics",
+      "Chemical Data Analysis",
+      "Deep Learning",
+      "Biostatistics",
+    ],
+  };
+
   return (
-    <main className="min-h-[100dvh] bg-stone-50">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <main className="min-h-[100dvh] bg-stone-50">
       {/* Floating Navigation */}
       <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-40 glass rounded-full px-8 py-3 flex items-center gap-8 animate-fade-in">
         <Image
@@ -269,5 +301,6 @@ export default function Home() {
         </div>
       </footer>
     </main>
+    </>
   );
 }
